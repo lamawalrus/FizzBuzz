@@ -12,6 +12,9 @@ y = np.zeros(shape=(X.shape[0], 4), dtype=np.int32)
 scaler = MinMaxScaler()
 
 # Wait, didn't we solve FizzBuzz here..
+# This really requires better dataset balancing.
+# All categories should have equal representation, 
+# but here we heavily lean towards [any num] => [0, 0, 0, 0]
 cnt = 0
 for i, val in enumerate(X):
     if val % 3 == 0 and val % 5 == 0:
